@@ -1,4 +1,4 @@
-<header class="container h1 text-center fw-bolder mt-5 mb-3">ToDO</header>
+<header class="container h1 text-center fw-bolder mt-5 mb-3">TODO List</header>
 <section>
   <table class="table container">
     <thead class="bg-black text-light fw-bold">
@@ -15,7 +15,7 @@
         <td class="p-2">{{ datas.id }}</td>
         <td class="p-2">{{ datas.title }}</td>
         <td class="p-2">{{ datas.description }}</td>
-        <td class="p-2">{{ datas.status ? "completed" : "pending" }}</td>
+        <td class="p-2">{{ datas.status ? "Completed" : "Pending" }}</td>
         <td>
           <button (click)="deleting(datas.id)" class="btn bg-danger">
             delete
