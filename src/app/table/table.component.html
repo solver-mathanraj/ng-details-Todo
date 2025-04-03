@@ -1,0 +1,23 @@
+<header class="container h1 text-center fw-bolder my-5">DETAILS</header>
+<section>
+  <table class="table container"> 
+    <thead class="bg-black text-light fw-bold">
+      <td class="p-3">S. NO</td>
+      <td class="p-3">Title</td>
+      <td class="p-3">Description</td>
+      <td class="p-3">Status</td>
+      <td class="p-3">Action</td>
+    </thead>
+    <tbody>
+      @for(datas of data; track datas;let i=$index){
+      <tr class="border-1">
+        <td class="p-2">{{ datas.id }}</td>
+        <td class="p-2">{{ datas.title }}</td>
+        <td class="p-2">{{ datas.description }}</td>
+        <td class="p-2">{{ datas.status ? "completed" : "pending" }}</td>
+        <td><button (click)="deleting(datas.id)" class="btn bg-danger">delete</button></td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</section>
