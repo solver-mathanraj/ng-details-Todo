@@ -1,4 +1,4 @@
-<header class="container h1 text-center fw-bolder my-5">ToDO</header>
+<header class="container h1 text-center fw-bolder mt-5 mb-3">ToDO</header>
 <section>
   <table class="table container">
     <thead class="bg-black text-light fw-bold">
@@ -9,8 +9,8 @@
       <td class="p-3">Action</td>
     </thead>
     <tbody>
-      @for(datas of data; track datas;let i=$index){
-        @if(this.data.length>1){
+      @if(this.data.length>0){ 
+        @for(datas of data; track datas;let i=$index){
       <tr class="border-1">
         <td class="p-2">{{ datas.id }}</td>
         <td class="p-2">{{ datas.title }}</td>
@@ -21,9 +21,11 @@
             delete
           </button>
         </td>
-      </tr>}@else {
-        <p class="container w-100 fw-bold">No data</p>
-      }
+      </tr>
+      } } @else {
+        <tr class="mt-2">
+      <td colspan="5" class="text-center m-5 fw-bold">No data</td>
+      </tr>
       }
     </tbody>
   </table>
